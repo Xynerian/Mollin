@@ -1,0 +1,28 @@
+body {
+    background-color: rgb(124, 137, 150);
+    font-family: silkscreen;
+}
+
+a {
+    text-decoration: underline;
+    color: black;
+}
+
+footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(87, 95, 104);
+    padding: 5px;
+}
+
+p {
+    font-size: 1rem;
+}
+
+.note {
+    font-size: 13px;
+}
+
+#iconIMG {
+    width: calc(1rem * 0.7);
+}

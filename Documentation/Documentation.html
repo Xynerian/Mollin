@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation</title>
+    <link rel="stylesheet" href="./Documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link id="icon" rel="icon" href="../Images/Favicon.png" type="image/png">
+</head>
+
+<body>
+    <h1>Documentation</h1>
+    <nav>
+        <ol>
+            <li><a href="#hello">Hello.</a></li>
+            <li><a href="#inputs">The inputs.</a></li>
+            <li><a href="#status">Status value's</a></li>
+            <li><a href="#events">Events</a></li>
+        </ol>
+    </nav>
+    <h2 id="hello">Hello.</h2>
+    <p>This is the documentation for a project I'm currently working on, called Mollins. In this simulation/game you
+        watch over generations of Mollins as they evolve and adapt to their environment (hopefully, atleast).</p>
+
+    <h2 id="inputs">The inputs.</h2>
+    <p>When you open the simulation/game you are greeted with some parameters like the Maximum Health, Maximum Temp,
+        Minimum Temp, etc. This section will tell you what each of these does.</p>
+    <h3 id="maxHealth">Maximum Health</h3>
+    <p>The maximum health of a Mollin.</p>
+    <h3 id="maxTemp">Maximum Temperature</h3>
+    <p>The highest temperature a Mollin can survive in before it starts taking damage.</p>
+    <h3 id="minTemp">Minimum Temperature</h3>
+    <p>The lowest temperature a Mollin can survive in before it starts taking damage.</p>
+    <h3 id="lifetime">Lifetime</h3>
+    <p>The lifespan of a Mollin in hours(In Mollin time. Learn more about that <a href="#age">here</a>).</p>
+    <h3 id="maxHunger">Maximum Food</h3>
+    <p>The maximum amount of food a Mollin can store before it starts taking damage due to over-eating.</p>
+    <p class="note">Note: This might be a bit tricky to remember, but the hunger isn't actually how hungry the Mollin
+        is, it's how much food it has.</p>
+    <h3 id="foodChance">Food Chance</h3>
+    <p>The chance that a mollin will find food every hour. This is a percentage.</p>
+    <p class="note">Note: All of the above values will gradually change as the mollin mutates.</p>
+
+    <h2 id="status">Status Value's</h2>
+    <p>This will hopefully give you a good enough understanding of what the different status values mean.</p>
+    <h3 id="health">Health</h3>
+    <p>The health of a Mollin, when this reaches zero, the Mollin dies and either the species goes extinct or, if the
+        dead mollin lived through atleast a quarter of it's lifetime, the <a href="#death">death event</a> triggers.</p>
+    <h3 id="hunger">Hunger</h3>
+    <p>The amount of food a Mollin currently has.</p>
+    <h3 id="temp">Temperature</h3>
+    <p>The temperature of a Mollin. If this goes below the minimum temperature it will take damage equal to the
+        difference between the current temperature and the minimum temperature. The same applies to going over the
+        maximum.</p>
+    <h3 id="age">Age</h3>
+    <p>Each unit represents one hour of a Mollin's life. To you, each unit is the tick speed. The tick speed can be viewed and changed in settings (this symbol <img src="../Images/MenuIcon.gif" id="iconIMG">) at the top of the web page.</p>
+    
+    <h2 id="events">Events</h2>
+    <p>Events happen when certain conditions are met. They are usually not part of every tick.</p>
+    <h3 id="foodEvent">Finding Food</h3>
+    <p>Every tick there is a chance (the <a href="#foodChance">Food Chance</a>) that the mollin will find food equal to it's <a href="#foodChance">Food Chance</a> divided by 10 plus 1.</p>
+    <h3 id="reproduction">Reproduction</h3>
+    <p>When a mollin's <a href="#age">age</a> reaches half of it's <a href="#lifetime">lifetime</a>, and it's <a href="#hunger">hunger</a> stat is atleast half of it's <a href="#maxHunger">Maximum Food</a> attribute <strong>and</strong> it's <a href="#age">age</a> is less than 3/4 of it's <a href="#lifetime">lifetime</a>, it will reproduce.</p>
+    <h3 id="death">Death</h3>
+    <p>When a mollin's <a href="#health">health</a> reaches zero, it dies, but, if it lived through at least a quarter of it's <a href="#lifetime">lifetime</a>, it's parent generation continues.</p>
+    <footer>
+        <h2>Information</h2>
+        <h3><a href="../Game Code/Mollins.html" target="_blank">Play the game here.</a></h3>
+        <address>
+            Programing and Art by: <abbr title="Zie-near-e-an">Xynerian</abbr><br>
+            Discord: <abbr title="Zie-near-e-ack-e-own">Xyneriackione</abbr><br>
+            Email: <a href="mailto:ariasmooner@gmail.com">ariasmooner@gmail.com</a>
+        </address>
+    </footer>
+</body>
+
+</html>
