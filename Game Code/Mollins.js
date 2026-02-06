@@ -54,7 +54,7 @@ function Mollin(maxHealth, maxTemp, minTemp, lifetime, maxHunger = 50, mutateCha
     mollin.paused = false;
     mollin.updateUI = function () {
         document.getElementById("maxHealth").innerText = `Max Health: ${mollin.attributes.maxHealth}`;
-        document.getElementById("health").innerText = `Health: ${mollin.status.health}`;
+        document.getElementById("health").innerText = `Health: ${Math.round(mollin.status.health)}`;
         document.getElementById("temp").innerText = `Current Temperature: ${mollin.status.temp}°F`;
         document.getElementById("age").innerText = `Age: ${mollin.status.age}`;
         document.getElementById("tempRange").innerText = `Temperature Range: ${mollin.attributes.minTemp} - ${mollin.attributes.maxTemp}°F`;
@@ -149,6 +149,10 @@ function Mollin(maxHealth, maxTemp, minTemp, lifetime, maxHunger = 50, mutateCha
                 mollin.log("Found food.");
             }
 
+            if (mollin.status.health > mollin.attributes.maxHealth) {
+                mollin.status.health -= 5;  
+            }
+
             if (mollin.status.hunger > mollin.attributes.maxHunger) {
                 mollin.status.hunger = mollin.attributes.maxHunger;
             }
@@ -195,6 +199,7 @@ function Mollin(maxHealth, maxTemp, minTemp, lifetime, maxHunger = 50, mutateCha
                 mollin.updateUI();
                 mollin.log("Extinction.");
                 localStorage.removeItem("mollinSave");
+                document.getElementById("inputs-container").style.display = 'inline-block';
                 break;
             }
             if (mollin.status.health <= 0) {
@@ -212,6 +217,7 @@ function Mollin(maxHealth, maxTemp, minTemp, lifetime, maxHunger = 50, mutateCha
                     mollin.updateUI();
                     mollin.log("Extinction.");
                     localStorage.removeItem("mollinSave");
+                    document.getElementById("inputs-container").style.display = 'inline-block';
                     break;
                 }
             }
