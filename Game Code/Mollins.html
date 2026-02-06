@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mollins Simulation</title>
+    <link id="icon" rel="icon" href="../Images/Favicon.png" type="image/png">
+    <link rel="stylesheet" href="Mollins.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <script src="Mollins.js" defer></script>
+</head>
+
+<body>
+    <div id="loadingScreen">
+        <img src="../Images/LoadingIcon.gif" alt="Loading Icon" id="loadingIcon">
+    </div>  
+    <img src="../Images/MenuIcon.gif" alt="Mollins Menu Icon" id="menuIcon">
+    <div id="settingsMenu">
+        <h2 style="margin-top: 5px;">Settings Menu</h2>
+        <p><a href="../Documentation/Documentation.html" target="_blank">Documentation</a></p>
+        <br>
+        <label for="tickSpeed">Tick Speed:</label>
+        <input id="tickSpeed" placeholder="0.5">
+        <audio id="music" loop>
+            <source src="../Audio/mainTheme.wav" type="audio/wav" id="musicSource">
+            Your browser does not support the audio element or does not support the file type.
+        </audio>
+        <audio id="danger" loop>
+            <source src="../Audio/danger.wav" type="audio/wav">
+            Your browser does not support the audio element.
+        </audio>
+        <br>
+        <label for="audio">Play Music:</label>
+        <img src="../Images/EmptyCheckMark.gif" id="audioToggleOff">
+        <img src="../Images/CheckMark.gif" id="audioToggleOn">
+        <hr style="margin-left: 0; margin-right: 0; width: 100%;">
+        <button id="restartScreen" type="button">Restart</button>
+        <div id="verifyRestart">
+            <p>Are you sure you want to <strong class="warning">restart</strong>? This will delete all of your save
+                data, <strong class="warning">forever</strong>.</p>
+            <button id="restartButton">Restart</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+    </div>
+    <h1>Mollins Simulation</h1>
+    <div id="inputs-container">
+        <h2>Inputs</h2>
+        <button id="randomizeInputs" type="button">Randomize</button>
+        <br>
+        <label for="maxHealthInput">Maximum Health:</label>
+        <input required type="number" id="maxHealthInput" placeholder="Maximum Health">
+        <br>
+        <label for="maxTempInput">Maximum Temperature:</label>
+        <input required type="number" id="maxTempInput" placeholder="Maximum Temperature">
+        <br>
+        <label for="minTempInput">Minimum Temperature:</label>
+        <input required type="number" id="minTempInput" placeholder="Minimum Temperature">
+        <br>
+        <label for="lifetimeInput">Lifetime:</label>
+        <input required type="number" id="lifetimeInput" placeholder="Lifetime">
+        <br>
+        <label for="maxHungerInput">Maximum Hunger:</label>
+        <input required type="number" id="maxHungerInput" placeholder="Maximum Hunger">
+        <br>
+        <label for="foodChanceInput">Food Chance:</label>
+        <input required type="number" id="foodChanceInput" placeholder="Food Chance">
+    </div>
+    <button id="startButton" type="button">Start</button>
+
+    <div id="liveButtonContainer">
+        <button class="live-button" id="increaseTemp">Increase Temp</button>
+        <button class="live-button" id="decreaseTemp">Decrease Temp</button>
+        <button class="live-button" id="feedMollin">Feed Mollin</button>
+        <button class="live-button" id="pause">Pause</button>
+    </div>
+    <div id="simulation-container">
+        <h2>Simulation Details</h2>
+        <h3 style="margin-bottom: 5px;">Mollin Attributes</h3>
+        <p id="maxHealth" class="stats">Maximum Health</p>
+        <p id="maxHunger" class="stats">Maximum Food</p>
+        <p id="foodChance" class="stats">Food Chance</p>
+        <p id="tempRange" class="stats">Temperature Range</p>
+        <p id="lifetime" class="stats">Lifetime</p>
+        <p id="generation" class="stats">Generation</p>
+
+        <hr>
+
+        <h3 style="margin-bottom: 5px;">Current Status</h3>
+        <p id="health" class="stats">Health</p>
+        <p id="hunger" class="stats">Hunger</p>
+        <p id="temp" class="stats">Temperature</p>
+        <p id="age" class="stats">Age</p>
+
+        <hr>
+
+        <img id="mollinSleeping" src="../Images/MollinSleeping.png" alt="Mollin Sleeping" width="20%" height="5%">
+        <img id="mollinAlive" src="../Images/MollinAlive.gif" alt="Mollin hopping up and down" width="20%" height="5%"
+            style="margin-bottom: 0; padding-bottom: 0;">
+        <img id="mollinDead" src="../Images/MollinDead.png" alt="Dead Mollin" width="20%" height="5%">
+
+        <hr style="margin-bottom: 0; margin-top: 0px;">
+
+        <div id="log" style="margin-top: 0px;"></div>
+    </div>
+    <footer>
+        <h2 class="footer">Information</h2>
+        <address class="footer">
+            Programing and Art by: <abbr class="footer" title="Zie-near-e-an">Xynerian</abbr><br>
+            Discord: <abbr class="footer" title="Zie-near-e-ack-e-own">Xyneriackione</abbr><br>
+            Email: <a class="footer" href="mailto:ariasmooner@gmail.com">ariasmooner@gmail.com</a>
+        </address>
+    </footer>
+</body>
+
+</html>

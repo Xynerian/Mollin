@@ -1,0 +1,257 @@
+* {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    color: white;
+    font-family: 'Silkscreen', sans-serif;
+}
+
+body {
+    outline: none;
+}
+
+h1,
+h2,
+h3 {
+    text-align: center;
+    color: white;
+}
+
+button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+button:active {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+div {
+    border: 2px solid white;
+}
+
+a {
+    text-decoration: underline;
+    color: inherit;
+
+}
+
+input {
+    margin-top: 10px;
+}
+
+footer,
+.footer {
+    text-align: center;
+    font-size: 12px;
+    background-color: rgb(87, 95, 104);
+}
+
+#simulation-container {
+    border: 3px solid white;
+    height: 80%;
+}
+
+#liveButtonContainer {
+    position: sticky;
+    top: 0px;
+}
+
+.stats {
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding: 5px;
+    border: 3px solid white;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+
+#log {
+    display: block;
+    color: white;
+    text-align: center;
+    height: 31vh;
+    width: 99.6%;
+    overflow-y: auto;
+    margin: 0;
+}
+
+.live-button {
+    display: inline-block;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 15px;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    vertical-align: bottom;
+}
+
+#settingsMenu {
+    width: 600px;
+    height: 300px;
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: black;
+    border: 2px solid white;
+    padding: 10px;
+    z-index: 100;
+}
+
+#startButton {
+    cursor: pointer;
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 50px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    font-size: 23px;
+}
+
+#restartButton {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 50px;
+    background-color: rgb(70, 16, 16);
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    font-size: 23px;
+    vertical-align: bottom;
+}
+#restartButton:active {
+    background-color: rgb(255, 0, 0);
+    color: rgb(70, 16, 16);
+    border: 2px solid rgb(70, 16, 16);
+}
+
+#restartScreen {
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 45%;
+    height: 50px;
+    background-color: rgb(70, 16, 16);
+    color: rgb(255, 0, 0);
+    border: 2px solid rgb(255, 0, 0);
+    font-size: 23px;
+}
+
+#restartScreen:active {
+    background-color: rgb(255, 0, 0);
+    color: rgb(70, 16, 16);
+    border: 2px solid rgb(70, 16, 16);
+}
+
+#verifyRestart {
+    border: 2px solid rgb(92, 7, 7);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    display: none;
+}
+
+#cancelButton {
+    width: 45%;
+    height: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    vertical-align: bottom;
+}
+
+.warning {
+    color: rgb(255, 0, 0);
+}
+
+#menuIcon {
+    width: 15px;
+    height: 15px;
+    background: transparent;
+}
+
+#inputs-container {
+    border-right: 3px solid white;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+}
+
+#inputs-container input {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+#mollinAlive, #mollinDead {
+    display: none;
+}
+
+#audioToggleOn {
+    display: none;
+}
+
+#audioToggleOn, #audioToggleOff {
+    width: 15px;
+    vertical-align: middle;;
+    cursor: pointer;
+}
+
+#loadingScreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    border: none;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    z-index: 200;
+}
+
+#loadingIcon {
+    width: 10%;
+}
+
+#randomizeInputs {
+    display: inline-block;
+    width: 40%;
+    text-align: center;
+    font-size: 1.5rem;
+}
